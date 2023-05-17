@@ -7,8 +7,8 @@ CREATE TABLE flashcard_set
 CREATE TABLE flashcard
 (
     id       BIGSERIAL PRIMARY KEY,
-    set_id  BIGINT NOT NULL REFERENCES flashcard_set ON DELETE CASCADE,
-    question TEXT NOT NULL,
-    answer   TEXT NOT NULL,
+    set_id   BIGINT  NOT NULL REFERENCES flashcard_set ON DELETE CASCADE,
+    question TEXT    NOT NULL,
+    answer   TEXT    NOT NULL,
     learned  BOOLEAN NOT NULL
 );
