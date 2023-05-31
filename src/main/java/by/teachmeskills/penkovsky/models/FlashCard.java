@@ -8,6 +8,7 @@ public class FlashCard {
     private boolean learned;
     private Integer setID;
 
+
     public FlashCard(Integer id, String tittleFlashCard, String question, String answer, boolean learned, Integer setID) {
         this.id = id;
         this.tittleFlashCard = tittleFlashCard;
@@ -15,6 +16,17 @@ public class FlashCard {
         this.answer = answer;
         this.learned = learned;
         this.setID = setID;
+    }
+
+    public FlashCard(Integer id) {
+        this.id = id;
+    }
+
+    public FlashCard(int id, String question, String answer, Boolean active) {
+        this.id = id;
+        this.question = question;
+        this.answer = answer;
+        this.learned = active;
     }
 
     public Integer getId() {
@@ -77,6 +89,5 @@ public class FlashCard {
                 '}';
     }
     public FlashCard() {
-
     }
 }

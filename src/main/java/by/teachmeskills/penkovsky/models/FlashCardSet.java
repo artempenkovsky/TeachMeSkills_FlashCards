@@ -5,12 +5,48 @@ import java.util.List;
 public class FlashCardSet {
     private Integer id;
     private String title;
+    private int countOfCard;
+    private int countOfLearnedCard;
     private List<FlashCard> flashCardList;
 
-    public FlashCardSet(Integer id, String title, List<FlashCard> flashCardList) {
+
+    public FlashCardSet(Integer id, String title, int countOfCard, int countOfLearnedCard) {
         this.id = id;
         this.title = title;
-        this.flashCardList = flashCardList;
+        this.countOfCard = countOfCard;
+        this.countOfLearnedCard = countOfLearnedCard;
+    }
+
+    public FlashCardSet(Integer id) {
+        this.id = id;
+    }
+
+    public int getCountOfCard() {
+        return countOfCard;
+    }
+
+    public void setCountOfCard(int countOfCard) {
+        this.countOfCard = countOfCard;
+    }
+
+    public int getCountOfLearnedCard() {
+        return countOfLearnedCard;
+    }
+
+    public void setCountOfLearnedCard(int countOfLearnedCard) {
+        this.countOfLearnedCard = countOfLearnedCard;
+    }
+
+    public FlashCardSet() {
+    }
+
+    public FlashCardSet(Integer id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    public FlashCardSet(String title) {
+        this.title = title;
     }
 
     public Integer getId() {
@@ -39,14 +75,12 @@ public class FlashCardSet {
 
     @Override
     public String toString() {
-        return "FlashCardSet{" + "id=" + id + ", title='" + title + '\'' + ", flashCardList=" + flashCardList + '}';
-    }
-
-    public FlashCardSet() {
-    }
-
-    public FlashCardSet(Integer id, String title) {
-        this.id = id;
-        this.title = title;
+        return "FlashCardSet{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", countOfCard=" + countOfCard +
+                ", countOfLearnedCard=" + countOfLearnedCard +
+                ", flashCardList=" + flashCardList +
+                '}';
     }
 }
